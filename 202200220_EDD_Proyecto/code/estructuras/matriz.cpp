@@ -122,31 +122,33 @@ void MatrizDispersa::eliminarPiloto(Piloto* piloto){
     }
 }
 bool MatrizDispersa::existeAvion(BTreeNode* node, const std::string& destino) {
-    for (int i = 0; i < node->t - 1; ++i) {
+    for (int i = 0; i <= node->m; ++i) {
+        if (i < node->keys.size()) 
         if (node->keys[i].ciudad_destino == destino){
             Piloto* piloto = arbolPilotos->getPiloto(arbolPilotos->root, node->keys[i].vuelo);
             if (piloto != nullptr) return true;
             return false;
         }
     }
-    for (size_t i = 0; i < node->t; ++i) {
-        if (!node->leaf) {
-            bool existe = existeAvion(node->C[i], destino);
+    for (size_t i = 0; i <= node->keys.size(); ++i) {
+        if (!node->isLeaf) {
+            bool existe = existeAvion(node->children[i], destino);
             if(!existe) return existe;
         }
     }
     return false;
 }
 void MatrizDispersa::insertarAvion(BTreeNode* node, const std::string& destino) {
-    for (int i = 0; i < node->t - 1; ++i) {
+    for (int i = 0; i <= node->m; ++i) {
+        if (i < node->keys.size()) 
         if (node->keys[i].ciudad_destino == destino){
             Piloto* piloto = arbolPilotos->getPiloto(arbolPilotos->root, node->keys[i].vuelo);
             if (piloto != nullptr) if(getCelda(piloto) == nullptr) insertarPiloto(piloto);
         }
     }
-    for (size_t i = 0; i < node->t; ++i) {
-        if (!node->leaf) {
-            existeAvion(node->C[i], destino);
+    for (size_t i = 0; i <= node->keys.size(); ++i) {
+        if (!node->isLeaf) {
+            existeAvion(node->children[i], destino);
         }
     }
 }

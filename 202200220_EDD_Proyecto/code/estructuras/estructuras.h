@@ -37,8 +37,8 @@ public:
     BTreeNode(int _t, int _m, bool _isLeaf);
     void traverse();
     BTreeNode* search(const string& k);
-    Avion* getAvionVuelo(const string& k);
-    Avion* getAvionDestino(const string& k);
+    Avion* getAvionVuelo(BTreeNode* node, const std::string& vuelo);
+    Avion* getAvionDestino(BTreeNode* node, const std::string& destino);
     Avion* getAvionRegistro(const string& k);
     void insertNonFull(const Avion& k);
     void splitChild(int i, BTreeNode* y);
@@ -191,8 +191,8 @@ private:
     Celda* getColumna(string destino);
     Celda* getFila(string vuelo);
     Celda* getCelda(Piloto* piloto);
-    bool existeAvion(BTreeNode arbol, const std::string& k);
-    void insertarAvion(BTreeNode arbol, const std::string& k);
+    bool existeAvion(BTreeNode* node, const std::string& destino);
+    void insertarAvion(BTreeNode* node, const std::string& destino);
 public:
     MatrizDispersa(Grafo* grafoRutas, Arbol* arbolPilotos, BTree* arbolAviones): 
         head(new Celda()), grafoRutas(grafoRutas), arbolPilotos(arbolPilotos), arbolAviones(arbolAviones) {}
