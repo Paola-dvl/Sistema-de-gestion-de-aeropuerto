@@ -42,7 +42,7 @@ void MatrizDispersa::insertarPiloto(Piloto* piloto){ //Celda
     cout <<"**************" << endl;
     Celda* filActual = getFila(piloto->vuelo);
     if (filActual == nullptr){
-        Avion* vuelo = arbolAviones->root->getAvionVuelo(piloto->vuelo);
+        Avion* vuelo = arbolAviones->root->getAvionVuelo(arbolAviones->root, piloto->vuelo);
         if(vuelo == nullptr) return;
         insertarVuelo(vuelo);
         return;
@@ -121,31 +121,39 @@ void MatrizDispersa::eliminarPiloto(Piloto* piloto){
         }
     }
 }
-bool MatrizDispersa::existeAvion(BTreeNode arbol, const std::string& k) {
-    int i = 0;
-    while (i < arbol.keys.size() && k > arbol.keys[i].ciudad_destino) i++;
-    if (i < arbol.keys.size() && arbol.keys[i].ciudad_destino == k){
-        Piloto* piloto = arbolPilotos->getPiloto(arbolPilotos->root, arbol.keys[i].vuelo);
-        if (piloto != nullptr) return true;
-        return false;
+bool MatrizDispersa::existeAvion(BTreeNode* node, const std::string& destino) {
+    for (int i = 0; i < node->t - 1; ++i) {
+        if (node->keys[i].ciudad_destino == destino){
+            Piloto* piloto = arbolPilotos->getPiloto(arbolPilotos->root, node->keys[i].vuelo);
+            if (piloto != nullptr) return true;
+            return false;
+        }
     }
-    if (arbol.isLeaf) return false;
-    return existeAvion(*arbol.children[i], k);
+    for (size_t i = 0; i < node->t; ++i) {
+        if (!node->leaf) {
+            bool existe = existeAvion(node->C[i], destino);
+            if(!existe) return existe;
+        }
+    }
+    return false;
 }
-void MatrizDispersa::insertarAvion(BTreeNode arbol, const std::string& k) {
-    int i = 0;
-    while (i < arbol.keys.size() && k > arbol.keys[i].ciudad_destino) i++;
-    if (i < arbol.keys.size() && arbol.keys[i].ciudad_destino == k){
-        Piloto* piloto = arbolPilotos->getPiloto(arbolPilotos->root, arbol.keys[i].vuelo);
-        if (piloto != nullptr) if(getCelda(piloto) == nullptr) insertarPiloto(piloto);
+void MatrizDispersa::insertarAvion(BTreeNode* node, const std::string& destino) {
+    for (int i = 0; i < node->t - 1; ++i) {
+        if (node->keys[i].ciudad_destino == destino){
+            Piloto* piloto = arbolPilotos->getPiloto(arbolPilotos->root, node->keys[i].vuelo);
+            if (piloto != nullptr) if(getCelda(piloto) == nullptr) insertarPiloto(piloto);
+        }
     }
-    if (arbol.isLeaf) return;
-    insertarAvion(*arbol.children[i], k);
+    for (size_t i = 0; i < node->t; ++i) {
+        if (!node->leaf) {
+            existeAvion(node->C[i], destino);
+        }
+    }
 }
 void MatrizDispersa::insertarDestino(Lugar* destino){ //Columna
     if(getColumna(destino->nombre) != nullptr) return;
     if(arbolAviones->root == nullptr) return;
-    if(!existeAvion(*(arbolAviones->root), destino->nombre)) return;
+    if(!existeAvion(arbolAviones->root, destino->nombre)) return;
     cout << "Destino paso" << endl;
     Celda* colActual = head;
     Celda* colNueva = new Celda();
@@ -166,7 +174,7 @@ void MatrizDispersa::insertarDestino(Lugar* destino){ //Columna
         }
         colActual = colActual->derecha;
     }
-    insertarAvion(*(arbolAviones->root), destino->nombre);
+    insertarAvion(arbolAviones->root, destino->nombre);
     cout << "Insertado destino: " << destino->nombre << endl;
 }
 void MatrizDispersa::eliminarDestino(Lugar* destino){
