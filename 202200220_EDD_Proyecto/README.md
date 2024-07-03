@@ -1,0 +1,1 @@
+g++ -o menu code/menu.cpp code/carga/* code/report/* code/estructuras/*

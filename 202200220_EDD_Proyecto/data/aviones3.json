@@ -1,0 +1,56 @@
+[
+    {
+        "vuelo": "Test",
+        "numero_de_registro": "A1101",
+        "modelo": "Boeing 737",
+        "capacidad": 180,
+        "aerolinea": "AirlineX",
+        "ciudad_destino": "Madrid",
+        "estado": "Disponible"
+    },
+    {
+        "vuelo": "Test",
+        "numero_de_registro": "A1102",
+        "modelo": "Boeing 737",
+        "capacidad": 180,
+        "aerolinea": "AirlineX",
+        "ciudad_destino": "Madrid",
+        "estado": "Disponible"
+    },
+    {
+        "vuelo": "Test",
+        "numero_de_registro": "A1202",
+        "modelo": "Boeing 737",
+        "capacidad": 180,
+        "aerolinea": "AirlineX",
+        "ciudad_destino": "Madrid",
+        "estado": "Disponible"
+    },
+    {
+        "vuelo": "Test",
+        "numero_de_registro": "A1303",
+        "modelo": "Boeing 737",
+        "capacidad": 180,
+        "aerolinea": "AirlineX",
+        "ciudad_destino": "Madrid",
+        "estado": "Disponible"
+    },
+    {
+        "vuelo": "Test",
+        "numero_de_registro": "A1404",
+        "modelo": "Boeing 737",
+        "capacidad": 180,
+        "aerolinea": "AirlineX",
+        "ciudad_destino": "Madrid",
+        "estado": "Disponible"
+    },
+    {
+        "vuelo": "Test",
+        "numero_de_registro": "A5005",
+        "modelo": "Boeing 737",
+        "capacidad": 180,
+        "aerolinea": "AirlineX",
+        "ciudad_destino": "Madrid",
+        "estado": "Disponible"
+    }
+]

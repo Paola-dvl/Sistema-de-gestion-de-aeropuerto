@@ -1,0 +1,9 @@
+digraph G {
+  node [shape=box];
+  "V700" [label="V700 - Mantenimiento"];
+  "V700" -> "V715" [dir=both];
+  "V700" -> "V715" [dir=both];
+  "V715" [label="V715 - Mantenimiento"];
+  "V715" -> "V700" [dir=both];
+  "V715" -> "V700" [dir=both];
+}

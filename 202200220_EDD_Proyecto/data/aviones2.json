@@ -1,0 +1,110 @@
+[
+    {
+        "vuelo": "A100",
+        "numero_de_registro": "N12345",
+        "modelo": "Boeing 737",
+        "capacidad": 180,
+        "aerolinea": "AirlineX",
+        "ciudad_destino": "Madrid",
+        "estado": "Disponible"
+    },
+    {
+        "vuelo": "A102",
+        "numero_de_registro": "N54321",
+        "modelo": "Airbus A320",
+        "capacidad": 150,
+        "aerolinea": "AirlineY",
+        "ciudad_destino": "Zaragoza",
+        "estado": "Disponible"
+    },
+    {
+        "vuelo": "A103",
+        "numero_de_registro": "N67890",
+        "modelo": "Boeing 777",
+        "capacidad": 300,
+        "aerolinea": "AirlineZ",
+        "ciudad_destino": "Barcelona",
+        "estado": "Disponible"
+    },
+    {
+        "vuelo": "A104",
+        "numero_de_registro": "N23456",
+        "modelo": "Airbus A380",
+        "capacidad": 500,
+        "aerolinea": "AirlineX",
+        "ciudad_destino": "Paris",
+        "estado": "Mantenimiento"
+    },
+    {
+        "vuelo": "A105",
+        "numero_de_registro": "N34567",
+        "modelo": "Boeing 747",
+        "capacidad": 400,
+        "aerolinea": "AirlineY",
+        "ciudad_destino": "New York",
+        "estado": "Disponible"
+    },
+    {
+        "vuelo": "A106",
+        "numero_de_registro": "N45678",
+        "modelo": "Airbus A330",
+        "capacidad": 250,
+        "aerolinea": "AirlineZ",
+        "ciudad_destino": "London",
+        "estado": "Disponible"
+    },
+    {
+        "vuelo": "A107",
+        "numero_de_registro": "N56789",
+        "modelo": "Boeing 787",
+        "capacidad": 280,
+        "aerolinea": "AirlineX",
+        "ciudad_destino": "Berlin",
+        "estado": "Mantenimiento"
+    },
+    {
+        "vuelo": "A108",
+        "numero_de_registro": "N67891",
+        "modelo": "Airbus A350",
+        "capacidad": 300,
+        "aerolinea": "AirlineY",
+        "ciudad_destino": "Rome",
+        "estado": "Disponible"
+    },
+    {
+        "vuelo": "A109",
+        "numero_de_registro": "N78901",
+        "modelo": "Boeing 737 MAX",
+        "capacidad": 200,
+        "aerolinea": "AirlineZ",
+        "ciudad_destino": "Tokyo",
+        "estado": "Disponible"
+    },
+    {
+        "vuelo": "A110",
+        "numero_de_registro": "N89012",
+        "modelo": "Airbus A321",
+        "capacidad": 190,
+        "aerolinea": "AirlineX",
+        "ciudad_destino": "Sydney",
+        "estado": "Disponible"
+    },
+    {
+        "vuelo": "A111",
+        "numero_de_registro": "N78445",
+        "modelo": "Airbus A321",
+        "capacidad": 190,
+        "aerolinea": "AirlineZ",
+        "ciudad_destino": "Guatemala",
+        "estado": "Disponible"
+    },
+    {
+        "vuelo": "A112",
+        "numero_de_registro": "N11011",
+        "modelo": "Malazia 598",
+        "capacidad": 25,
+        "aerolinea": "AirlineZ",
+        "ciudad_destino": "California",
+        "estado": "Disponible"
+    }
+]

@@ -1,0 +1,34 @@
+digraph Arbol {
+node [shape=record];
+node0 [label="<f1>| {Horas: 300 | Numero: X10000123}|<f2>"];
+node0:f1 -> node1;
+node1 [label="<f1>| {Horas: 100 | Numero: X20000123}|<f2>"];
+node1:f1 -> node2;
+node2 [label="<f1>| {Horas: 80 | Numero: X60000123}|<f2>"];
+node2:f1 -> node3;
+node3 [label="<f1>| {Horas: 70 | Numero: X90000123}|<f2>"];
+node3:f1 -> node4;
+node4 [label="<f1>| {Horas: 40 | Numero: X05000123}|<f2>"];
+node1:f2 -> node5;
+node5 [label="<f1>| {Horas: 150 | Numero: X30000123}|<f2>"];
+node5:f1 -> node6;
+node6 [label="<f1>| {Horas: 120 | Numero: X04000123}|<f2>"];
+node5:f2 -> node7;
+node7 [label="<f1>| {Horas: 175 | Numero: X50000123}|<f2>"];
+node7:f2 -> node8;
+node8 [label="<f1>| {Horas: 215 | Numero: X70000123}|<f2>"];
+node8:f1 -> node9;
+node9 [label="<f1>| {Horas: 190 | Numero: X03000123}|<f2>"];
+node8:f2 -> node10;
+node10 [label="<f1>| {Horas: 295 | Numero: X80000123}|<f2>"];
+node10:f1 -> node11;
+node11 [label="<f1>| {Horas: 235 | Numero: X01000123}|<f2>"];
+node0:f2 -> node12;
+node12 [label="<f1>| {Horas: 640 | Numero: X40000123}|<f2>"];
+node12:f1 -> node13;
+node13 [label="<f1>| {Horas: 305 | Numero: X02000123}|<f2>"];
+node13:f2 -> node14;
+node14 [label="<f1>| {Horas: 365 | Numero: X06000123}|<f2>"];
+node12:f2 -> node15;
+node15 [label="<f1>| {Horas: 999 | Numero: X07000123}|<f2>"];
+}

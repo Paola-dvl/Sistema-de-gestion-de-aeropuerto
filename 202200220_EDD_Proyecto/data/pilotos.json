@@ -1,0 +1,58 @@
+[
+    {
+        "nombre": "John Doe",
+        "nacionalidad": "Estados Unidos",
+        "numero_de_id": "P12345678",
+        "vuelo": "A100",
+        "horas_de_vuelo": 600,
+        "tipo_de_licencia": "PPL"
+    },
+    {
+        "nombre": "Jane Smith",
+        "nacionalidad": "Reino Unido",
+        "numero_de_id": "P98765432",
+        "vuelo": "A200",
+        "horas_de_vuelo": 99,
+        "tipo_de_licencia": "CPL"
+    },
+    {
+        "nombre": "Carlos García",
+        "nacionalidad": "México",
+        "numero_de_id": "P56789012",
+        "vuelo": "B300",
+        "horas_de_vuelo": 450,
+        "tipo_de_licencia": "ATPL"
+    },
+    {
+        "nombre": "Alice Johnson",
+        "nacionalidad": "Canadá",
+        "numero_de_id": "P23456789",
+        "vuelo": "C400",
+        "horas_de_vuelo": 1200,
+        "tipo_de_licencia": "PPL"
+    },
+    {
+        "nombre": "Bob Brown",
+        "nacionalidad": "Australia",
+        "numero_de_id": "P34567890",
+        "vuelo": "D500",
+        "horas_de_vuelo": 300,
+        "tipo_de_licencia": "CPL"
+    },
+    {
+        "nombre": "Emma Wilson",
+        "nacionalidad": "Nueva Zelanda",
+        "numero_de_id": "P45678901",
+        "vuelo": "E600",
+        "horas_de_vuelo": 700,
+        "tipo_de_licencia": "PPL"
+    },
+    {
+        "nombre": "David Lee",
+        "nacionalidad": "Singapur",
+        "numero_de_id": "P67890123",
+        "vuelo": "F700",
+        "horas_de_vuelo": 150,
+        "tipo_de_licencia": "CPL"
+    }
+]

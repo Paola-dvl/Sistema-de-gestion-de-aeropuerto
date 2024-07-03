@@ -1,0 +1,17 @@
+digraph Matriz {
+node [shape=box]
+rank=same {n0_0  -> n0_1 }
+rank=same {n1_0  -> n1_1 }
+n0_1 -> n0_0
+n0_0 -> n1_0
+n1_0 -> n0_0
+n0_1 -> n1_1
+n1_1 -> n0_1
+n1_1 -> n1_0
+
+n0_0[label="RAIZ"]
+n0_1[label="Barcelona"]
+n1_0[label="V702"]
+n1_1[label="X05000123"]
+
+}
